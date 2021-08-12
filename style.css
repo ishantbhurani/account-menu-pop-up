@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #e4e4f4;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  line-height: 1.4;
+  gap: 0.5em;
+  padding: 1em;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.5em;
+  padding: 2em;
+  overflow: hidden;
+  box-shadow: 0 1em 1em #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5em;
+}
+
+.name {
+  font-size: 0.875em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.username {
+  font-size: 0.8em;
+}
+
+.check {
+  font-size: 0.875em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0.8em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.connect {
+  color: #4267b2;
+  font-size: 0.875em;
+  padding: 0 0.5em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.625em;
+  font-size: 0.875em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.action i {
+  font-size: 1.25em;
+}
+
+.action:hover,
+.connect:hover,
+.check:hover {
+  color: rgba(66, 103, 178, 0.8);
+}
+
+.chip {
+  background: linear-gradient(360deg, #fff, rgba(255, 255, 255, 0.2));
+  border-radius: 2em;
+  padding: 0.5em;
+  padding-right: 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.chip:hover {
+  background-color: #fff;
+}
+
+@media screen and (max-width: 310px) {
+  .card {
+    padding: 2em 1em;
+  }
+
+  .name {
+    font-size: 0.8em;
+  }
+
+  .username {
+    font-size: 0.7em;
+  }
+}
